@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
+    <div id="particles-js"></div>
     <nav>
       <div class="logo">
           <div class="circle"></div>
@@ -15,18 +17,37 @@
           <div class="circle"></div>
       </div>
       <div class="nav-links">
-          <a href="#art">Projects</a>
-          <a href="#about">About</a>
-          <a href="#hello">Hello</a>
+          <a href="projects.html" style="padding-top: 3px;">Projects</a>
+          <a href="https://github.com/brianbaso" target="_blank">
+            <img style="height: 32px; width: 32px;" src="img/github-icon.svg" alt="Github"/>
+          </a>
+          <a href="https://www.linkedin.com/in/brianbaso/" target="_blank">
+            <img style="height: 32px; width: 32px;" src="img/linkedin-icon.svg" alt="Linkedin"/>
+          </a>
       </div>
     </nav>
     <main>
         <div class="avatars-container">
-          <img class="pokemon" src="ho-oh.png" alt="Ho-oh Pokemon"/>
-          <img class="avatar" src="avatar.png" alt="My Avatar"/>
+          <img class="avatar" src="img/brian.jpeg" alt="My Avatar"/>
         </div>
-        <p class="intro-text">I am a full stack developer who has been building web applications big and small for over 7 years.</p>
-        <p class="secondary-text">When I'm not coding, you can find me playing pickleball, practicing calisthenics, or making music.</p>
+        <p class="intro-text">I am a software developer with a natural instinct to create, collaborate, and build meaningful relationships with others. I've been tinkering with web applications big and small for over 7 years.</p>
+        <p class="secondary-text">When I'm not coding, you can find me playing pickleball, taking photos, or making music. Check out some of my <a class="intro-link" href="projects.html">projects.</a></p>
     </main>
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 100 },
+          shape: { type: "circle" },
+          opacity: { value: 0.3 },
+          size: { value: 2 },
+          move: { speed: 2, direction: "none" },
+          line_linked: { enable: true, opacity: 0.4 }
+        },
+        interactivity: {
+          events: { onhover: { enable: true, mode: "repulse" } }
+        }
+      });
+     </script>
+
 </body>
 </html>

@@ -12,10 +12,9 @@ body {
 }
 
 nav {
-    position: fixed;
     top: 0;
     width: 100%;
-    padding: 4rem 12rem;
+    padding: 4rem 14rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -65,9 +64,33 @@ nav {
     left: 30%;
 }
 
+.logo:hover .circle:nth-child(1) {
+    animation: pulse 1s infinite alternate ease-in-out;
+}
+.logo:hover .circle:nth-child(2) {
+    animation: pulse 1s infinite alternate ease-in-out 0.2s;
+}
+.logo:hover .circle:nth-child(3) {
+    animation: pulse 1s infinite alternate ease-in-out 0.4s;
+}
+.logo:hover .circle:nth-child(4) {
+    animation: pulse 1s infinite alternate ease-in-out 0.6s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.25);
+        opacity: 0.8;
+    }
+}
+
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .nav-links a {
@@ -82,14 +105,61 @@ nav {
 }
 
 main {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 0rem 4rem;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.intro-link {
+    color: #fea1ff;
+    text-decoration: none;
+}
+
+.projects {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 2rem;
+}
+
+.project-item {
+  margin-bottom: 3rem;
+}
+
+.project-item a {
+  color: #fea1ff;
+  text-decoration: none;
+}
+
+.project-item a:hover {
+  letter-spacing: 5px;
+}
+
+.project-subheading {
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+}
+
+.project-preview {
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project-preview-img {
+  height: 400px;
+  width: 665px;
+  border-radius: 20px;
+}
+
+.project-preview-caption {
+  font-size: 13px;
+  padding-top: 1rem;
+  color: lightgrey;
 }
 
 .intro-text {
@@ -106,18 +176,12 @@ main {
 }
 
 .avatar {
-  height: 200px;
-}
-
-.pokemon {
-  height: 225px;
-  margin-bottom: 2rem;
-  animation: bounce 2s infinite alternate ease-in-out;
+  height: 240px;
+  border-radius: 50%;
+  border: 2px solid white;
 }
 
 .avatars-container {
-  margin-top: 3rem;
-  flex-direction: row;
   margin-bottom: 3rem;
 }
 
@@ -134,4 +198,12 @@ main {
     .intro-text, .secondary-text {
         font-size: 2rem;
     }
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #0a0a1a;
+  z-index: -1;
 }
